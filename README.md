@@ -37,6 +37,8 @@ source ~/ros2_ws/install/setup.bash
 ros2 launch ros2_py_template launch_example1.launch.py
 ```
 
+![](img/BridgeDraw.png)
+
 ## Graph
 
 The `/batman_draw` node publishes a `/turtle1/cmd_vel` topic (type: `geometry_msgs/Twist`) and ths simulator node (`/sim`) subscribes to the command topic.
