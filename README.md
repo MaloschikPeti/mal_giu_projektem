@@ -1,5 +1,10 @@
 # `ros2_py_template` package
 ROS 2 python package.  [![Static Badge](https://img.shields.io/badge/ROS_2-Humble-34aec5)](https://docs.ros.org/en/humble/)
+
+A package egy node-ból áll, ez a turtlesim szimulátorban képes a trajektóra kirajzolásával egy "Négy lyukú híd alakzat" előállítására. A hirdetett topic `geometry_msgs/twist` típusú. Megvalósítás `ROS 2 Humble` alatt.
+
+This package consist of one node. This can draw a "four hole bridge shape" in a turtlesim simulator. The type of the published topic is 'geometry-msgs/twist'. The implementation is builted in 'ROS 2 Humble'.
+
 ## Packages and build
 
 It is assumed that the workspace is `~/ros2_ws/`.
@@ -31,6 +36,16 @@ source ~/ros2_ws/install/setup.bash
 ``` r
 ros2 launch ros2_py_template launch_example1.launch.py
 ```
+
+flowchart TD
+
+U([bridgedraw.py]):::red -->  CMD[ /turtle1/cmd_vel<br/>geometry_msgs/Twist]:::light --> S([turtlesim_node]):::red
+
+classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
+classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
+classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#152742
+classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
+
 
 # Delete this part if you are using it as a template
 
