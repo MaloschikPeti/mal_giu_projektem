@@ -4,12 +4,12 @@ from geometry_msgs.msg import Twist
 import time
 import math
 
-class BatmanDraw(Node):
+class BridgeDraw(Node):
     def __init__(self):
-        super().__init__('batman_draw')
+        super().__init__('bridge_draw')
         self.publisher_ = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
         self.count_ = 0
-        self.get_logger().info("Drawing a Batman logo in Turtlesim.")
+        self.get_logger().info("Drawing a bridge in Turtlesim.")
         self.loop()
 
     def publish_message(self, fwd, turn):
@@ -42,7 +42,7 @@ class BatmanDraw(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = BatmanDraw()
+    node = BridgeDraw()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
