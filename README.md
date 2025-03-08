@@ -44,7 +44,7 @@ The `/batman_draw` node publishes a `/turtle1/cmd_vel` topic (type: `geometry_ms
 ```mermaid
 flowchart TD
 
-U([bridge_draw]):::red -->  CMD[ /turtle1/cmd_vel<br/>geometry_msgs/Twist]:::light --> S([\sim]):::red
+U([\bridge_draw]):::red -->  CMD[ /turtle1/cmd_vel<br/>geometry_msgs/Twist]:::light --> S([\sim]):::red
 
 classDef light fill:#34aec5,stroke:#152742,stroke-width:2px,color:#152742  
 classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
