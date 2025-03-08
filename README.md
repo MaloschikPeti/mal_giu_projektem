@@ -37,6 +37,11 @@ source ~/ros2_ws/install/setup.bash
 ros2 launch ros2_py_template launch_example1.launch.py
 ```
 
+## Graph
+
+The `/batman_draw` node publishes a `/turtle1/cmd_vel` topic (type: `geometry_msgs/Twist`) and ths simulator node (`/sim`) subscribes to the command topic.
+
+```mermaid
 flowchart TD
 
 U([bridgedraw.py]):::red -->  CMD[ /turtle1/cmd_vel<br/>geometry_msgs/Twist]:::light --> S([turtlesim_node]):::red
@@ -46,6 +51,8 @@ classDef dark fill:#152742,stroke:#34aec5,stroke-width:2px,color:#34aec5
 classDef white fill:#ffffff,stroke:#152742,stroke-width:2px,color:#152742
 classDef red fill:#ef4638,stroke:#152742,stroke-width:2px,color:#fff
 
+
+```
 
 # Delete this part if you are using it as a template
 
